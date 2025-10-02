@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Informe de Carreras 2025 — Ingeniería en Sistemas & Biomédica</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <h1 class="brand">Informe de Carreras 2025</h1>
+      <nav class="nav__links">
+        <a href="#intro">Inicio</a>
+        <a href="#carreras">Carreras</a>
+        <a href="#entrevistas">Entrevistas</a>
+        <a href="#estadisticas">Estadísticas</a>
+        <a href="#audio">Audio</a>
+        <a href="#fuentes">Fuentes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section id="intro" class="hero container">
+    <div class="hero__text">
+      <h2>Explorá dos caminos: <span class="pill pill--sys">Ing. en Sistemas</span> y <span class="pill pill--bio">Ing. Biomédica</span></h2>
+      <p class="lead">
+        Informe interactivo con descripción de carreras, planes de estudio, instituciones en Córdoba, salidas laborales, entrevistas cortas y estadísticas útiles.
+      </p>
+      <div class="hero__actions">
+        <button class="btn" data-scroll="#carreras">Ver carreras</button>
+        <button class="btn btn--ghost" data-scroll="#estadisticas">Ver estadísticas</button>
+      </div>
+    </div>
+    <div class="hero__widget">
+      <div class="widget">
+        <div class="widget__head">
+          <strong>Comparar</strong>
+          <label class="switch">
+            <input id="compareToggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p class="muted">Activá el comparador para ver ambas carreras en paralelo.</p>
+        <input id="searchInput" class="search" placeholder="Buscá materias, temas o palabras clave..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRERAS -->
+  <section id="carreras" class="container">
+    <div id="compareGrid" class="grid grid--single">
+      <!-- SISTEMAS -->
+      <article class="card career" data-career="sistemas">
+        <header class="card__header">
+          <h3 class="title"><span class="dot dot--sys"></span> Ingeniería en Sistemas</h3>
+          <small class="tag">UNC · UTN · UCC · U. Blas Pascal</small>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="Pestañas Ing. en Sistemas">
+          <button class="tab is-active" data-tab="s-desc">Descripción</button>
+          <button class="tab" data-tab="s-inst">Instituciones & Duración</button>
+          <button class="tab" data-tab="s-plan">Plan de estudios (UNC)</button>
+          <button class="tab" data-tab="s-salidas">Salidas laborales</button>
+        </div>
+
+        <section class="tabpanes">
+          <!-- Descripción -->
+          <div class="tabpane is-active" id="s-desc">
+            <p class="just">
+              Forma profesionales con base analítica para interpretar y resolver problemas
+              mediante metodologías de sistemas y tecnologías de procesamiento de información. 
+              Egresados/as diseñan software, gestionan redes y crean soluciones IT que optimizan
+              procesos en organizaciones públicas y privadas.
+            </p>
+            <div class="timeline">
+              <div class="timeline__row"><span class="tl-dot"></span><div>Interés personal: programación, algoritmos, lógica y solución de problemas.</div></div>
+              <div class="timeline__row"><span class="tl-dot"></span><div>Factores externos: alta demanda laboral y mercado IT en expansión.</div></div>
+            </div>
+          </div>
+
+          <!-- Instituciones y duración -->
+          <div class="tabpane" id="s-inst">
+            <div class="list-cols">
+              <div>
+                <h4>Instituciones (Córdoba)</h4>
+                <ul>
+                  <li>Universidad Nacional de Córdoba (UNC)</li>
+                  <li>UTN — Regional Córdoba</li>
+                  <li>Universidad Blas Pascal</li>
+                  <li>Universidad Católica de Córdoba (UCC)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Duración</h4>
+                <ul>
+                  <li>Título intermedio: Analista Univ. de Sistemas (≈3 años)</li>
+                  <li>Título de grado: Ing. en Sistemas (≈5 años)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan de estudios (acordeones + filtro) -->
+          <div class="tabpane" id="s-plan">
+            <p class="muted">Usá el buscador de arriba para filtrar materias.</p>
+            <details open class="acc" data-acc>
+              <summary>1.º Año</summary>
+              <ul class="bullets">
+                <li>Algoritmos y Estructuras de Datos I</li>
+                <li>Matemática A · Matemática B</li>
+                <li>Organización de Computadoras</li>
+                <li>Introducción a la Ingeniería en Computación</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>2.º Año</summary>
+              <ul class="bullets">
+                <li>Algoritmos y Estructuras de Datos II</li>
+                <li>Arquitectura de Computadoras</li>
+                <li>Matemática C</li>
+                <li>Física I · Inglés Técnico</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>3.º Año</summary>
+              <ul class="bullets">
+                <li>Ingeniería de Software I · Base de Datos I</li>
+                <li>Física II · Redes de Computadoras</li>
+                <li>Probabilidad y Estadística</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>4.º Año</summary>
+              <ul class="bullets">
+                <li>Ing. de Software II · Base de Datos II</li>
+                <li>Teoría de la Computación · Programación Avanzada</li>
+                <li>Sistemas Operativos · Inteligencia Artificial</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>5.º Año</summary>
+              <ul class="bullets">
+                <li>Seguridad Informática · Sistemas Distribuidos</li>
+                <li>Gestión de Proyectos Informáticos · Seminario</li>
+                <li>Práctica Prof. Supervisada · Proyecto Final</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Salidas -->
+          <div class="tabpane" id="s-salidas">
+            <div class="chips">
+              <span class="chip">Desarrollo de Software</span>
+              <span class="chip">Bases de Datos</span>
+              <span class="chip">Ciberseguridad</span>
+              <span class="chip">Redes & SysAdmin</span>
+              <span class="chip">Consultoría IT</span>
+              <span class="chip">I+D Tecnológico</span>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- BIOMÉDICA -->
+      <article class="card career" data-career="biomedica">
+        <header class="card__header">
+          <h3 class="title"><span class="dot dot--bio"></span> Ingeniería Biomédica</h3>
+          <small class="tag">UNC · IUCBC</small>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="Pestañas Ing. Biomédica">
+          <button class="tab is-active" data-tab="b-desc">Descripción</button>
+          <button class="tab" data-tab="b-inst">Instituciones & Duración</button>
+          <button class="tab" data-tab="b-plan">Plan de estudios (UNC)</button>
+          <button class="tab" data-tab="b-salidas">Salidas laborales</button>
+        </div>
+
+        <section class="tabpanes">
+          <!-- Descripción -->
+          <div class="tabpane is-active" id="b-desc">
+            <p class="just">
+              Aplica tecnología avanzada a las ciencias naturales y la salud:
+              diseño y uso de dispositivos médicos, prótesis e instrumentación diagnóstica; 
+              desarrollo de soluciones para sistemas biológicos y bienestar humano.
+            </p>
+            <div class="timeline">
+              <div class="timeline__row"><span class="tl-dot"></span><div>Interés personal: cruce entre biología, física, informática y robótica.</div></div>
+              <div class="timeline__row"><span class="tl-dot"></span><div>Factores externos: necesidades de equipamiento complejo en hospitales y laboratorios.</div></div>
+            </div>
+          </div>
+
+          <!-- Instituciones y duración -->
+          <div class="tabpane" id="b-inst">
+            <div class="list-cols">
+              <div>
+                <h4>Instituciones (Córdoba)</h4>
+                <ul>
+                  <li>FCEFyN — UNC</li>
+                  <li>Instituto Univ. de Ciencias Biomédicas de Córdoba (IUCBC)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Duración</h4>
+                <ul>
+                  <li>Duración total: ≈5 años</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan de estudios (acordeones + filtro) -->
+          <div class="tabpane" id="b-plan">
+            <p class="muted">Filtrá por palabras clave con el buscador de la cabecera.</p>
+            <details open class="acc" data-acc>
+              <summary>Ingreso · Ambientación</summary>
+              <ul class="bullets">
+                <li>Física y Química · Matemática</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>1.º Año</summary>
+              <ul class="bullets">
+                <li>Análisis Matemático I · Química · Taller y Laboratorio</li>
+                <li>Álgebra Lineal · Física I · Química Orgánica y Biológica</li>
+                <li>Sistemas de Representación</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>2.º Año</summary>
+              <ul class="bullets">
+                <li>Análisis Matemático II · Anatomía p/Ingenieros</li>
+                <li>Estática y Resistencia de Materiales · Física II · Inglés</li>
+                <li>Análisis Matemático III · Electrónica · Histología p/Ingenieros</li>
+                <li>Informática y Cálculo Numérico · Probabilidad y Estadística</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>3.º Año</summary>
+              <ul class="bullets">
+                <li>Electrónica Digital I · Electrotecnia y Máquinas</li>
+                <li>Fisiología Humana · Señales y Sistemas</li>
+                <li>Biomateriales · Electrónica Digital II</li>
+                <li>Física Biomédica · Ing. Económica y Legal · Redes y Control</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>4.º Año</summary>
+              <ul class="bullets">
+                <li>Electrónica Analógica · Fisiopatología · Instalaciones Hospitalarias</li>
+                <li>Procesamiento de Señales · Transductores y Sensores</li>
+                <li>Biomecánica · Imágenes en Medicina · Instrumentación Biomédica</li>
+                <li>Práctica Profesional Supervisada</li>
+              </ul>
+            </details>
+            <details class="acc" data-acc>
+              <summary>5.º Año</summary>
+              <ul class="bullets">
+                <li>Ing. en Rehabilitación · Ing. Hospitalaria · Modelos y Simulaciones</li>
+                <li>Selectivas I–II · Radiaciones Ionizantes en Medicina</li>
+                <li>Higiene y Seguridad · Seguridad y Normalización Biomédica</li>
+                <li>Proyecto Integrador</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Salidas -->
+          <div class="tabpane" id="b-salidas">
+            <div class="chips">
+              <span class="chip">Hospitales & Clínicas</span>
+              <span class="chip">Industria de Dispositivos</span>
+              <span class="chip">Investigación & Docencia</span>
+              <span class="chip">Consultoría & Startups</span>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </section>
+
+  <!-- ENTREVISTAS -->
+  <section id="entrevistas" class="container">
+    <h3>Entrevistas</h3>
+    <div class="grid grid--videos">
+      <div class="video">
+        <h4>Ing. en Sistemas (Short · &lt;1 min)</h4>
+        <!-- YouTube Shorts embed -->
+        <iframe class="yt" src="https://www.youtube.com/embed/8XG4FRsw4ck"
+                title="Entrevista Ing. en Sistemas"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+        <a class="link" href="https://youtube.com/shorts/8XG4FRsw4ck?si=9aCfTC18TRcm2Tl9" target="_blank" rel="noopener">Abrir en YouTube</a>
+      </div>
+
+      <div class="video">
+        <h4>Ing. Biomédica</h4>
+        <iframe class="yt" src="https://www.youtube.com/embed/O0HWn042X4Q"
+                title="Entrevista Ing. Biomédica"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+        <a class="link" href="https://youtu.be/O0HWn042X4Q" target="_blank" rel="noopener">Abrir en YouTube</a>
+      </div>
+    </div>
+    <p class="muted">Si necesitás recortar a &lt; 5 min, podés usar una herramienta externa y reemplazar el enlace.</p>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section id="estadisticas" class="container">
+    <h3>Estadísticas: mapa de graduados (Ing. Biomédica)</h3>
+    <div class="mapwrap">
+      <!-- Embed de Google My Maps usando el MID del link que pasaste -->
+      <iframe class="map"
+        src="https://www.google.com/maps/d/embed?mid=1uGx-0Ih4QiQYKdEXX5fRI6zu0FuIHbLD&z=3&ll=-34.5,-58.4"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa de Graduados Ing. Biomédica - FCEFyN">
+      </iframe>
+    </div>
+
+    <div class="stats-cards">
+      <article class="stat">
+        <h4>Oferta universitaria</h4>
+        <p>La carrera se dicta en varias universidades del país (incluida FCEFyN–UNC e IUCBC).</p>
+      </article>
+      <article class="stat">
+        <h4>Demanda</h4>
+        <p>Necesidad de perfiles técnicos por equipamiento biomédico complejo en hospitales y laboratorios.</p>
+      </article>
+      <article class="stat">
+        <h4>Mercado IT (Sistemas)</h4>
+        <p>Alta demanda en desarrollo, datos, redes y ciberseguridad; amplio espectro de inserción.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- AUDIO (consigna 2) -->
+  <section id="audio" class="container">
+    <h3>Audio: factores de elección</h3>
+    <p>Grabá un audio corto explicando factores internos/externos de tu elección. Subilo acá y quedará listo para reproducir en la página.</p>
+
+    <div class="uploader" id="dropzone">
+      <input id="audioInput" type="file" accept="audio/*" />
+      <p><strong>Arrastrá tu archivo</strong> o <label for="audioInput" class="link">buscalo en tu PC</label>.</p>
+    </div>
+
+    <audio id="player" controls class="player" hidden></audio>
+  </section>
+
+  <!-- CONCLUSIÓN -->
+  <section class="container">
+    <h3>Conclusión</h3>
+    <p class="just">
+      Ambas trayectorias dialogan con intereses distintos y complementarios: lo científico–experimental en Biomédica
+      y lo lógico–computacional en Sistemas. Elegir con información y autoconocimiento orienta mejor la proyección profesional.
+    </p>
+  </section>
+
+  <!-- FUENTES -->
+  <section id="fuentes" class="container">
+    <h3>Fuentes y enlaces</h3>
+    <ul class="links">
+      <li><a href="https://youtube.com/shorts/8XG4FRsw4ck?si=9aCfTC18TRcm2Tl9" target="_blank" rel="noopener">Entrevista Ing. en Sistemas (YouTube Short)</a></li>
+      <li><a href="https://youtu.be/O0HWn042X4Q" target="_blank" rel="noopener">Entrevista Ing. Biomédica (YouTube)</a></li>
+      <li><a href="https://www.google.com/maps/d/viewer?mid=1uGx-0Ih4QiQYKdEXX5fRI6zu0FuIHbLD&femb=1&ll=27.433301323824434%2C-30.74508058992967&z=2" target="_blank" rel="noopener">Mapa de Graduados Ing. Biomédica (FCEFyN)</a></li>
+    </ul>
+    <p class="muted">Si querés, agrego más estadísticas con gráficos (ej: matrícula, egreso, inserción laboral) en otra sección.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Hecho con ❤️ para la actividad FVT — Córdoba, 2025</small>
+    </div>
+  </footer>
+
+  <!-- Interacciones JS mínimas -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll("[data-scroll], .nav__links a").forEach(a=>{
+      a.addEventListener("click", e=>{
+        e.preventDefault();
+        const sel = a.getAttribute("data-scroll") || a.getAttribute("href");
+        const el = document.querySelector(sel);
+        if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+
+    // Tabs
+    document.querySelectorAll(".career").forEach(card=>{
+      const tabs = card.querySelectorAll(".tab");
+      const panes = card.querySelectorAll(".tabpane");
+      tabs.forEach(tab=>{
+        tab.addEventListener("click", ()=>{
+          tabs.forEach(t=>t.classList.remove("is-active"));
+          panes.forEach(p=>p.classList.remove("is-active"));
+          tab.classList.add("is-active");
+          card.querySelector("#"+tab.dataset.tab).classList.add("is-active");
+        });
+      });
+    });
+
+    // Compare grid
+    const compareToggle = document.getElementById("compareToggle");
+    const compareGrid = document.getElementById("compareGrid");
+    compareToggle.addEventListener("change", ()=>{
+      compareGrid.classList.toggle("grid--compare", compareToggle.checked);
+      compareGrid.classList.toggle("grid--single", !compareToggle.checked);
+    });
+
+    // Accordions: close others in la misma tarjeta
+    document.querySelectorAll("[data-acc]").forEach(acc=>{
+      acc.addEventListener("toggle", ()=>{
+        if(acc.open){
+          const group = acc.parentElement.querySelectorAll("[data-acc]");
+          group.forEach(a=>{ if(a!==acc) a.open=false; });
+        }
+      });
+    });
+
+    // Live search (filtra items por texto dentro de .career)
+    const search = document.getElementById("searchInput");
+    search.addEventListener("input", ()=>{
+      const q = search.value.trim().toLowerCase();
+      document.querySelectorAll(".career .bullets li, .career .timeline__row div").forEach(el=>{
+        const show = el.textContent.toLowerCase().includes(q);
+        el.parentElement.classList.toggle("is-hidden", q && !show && el.tagName!=="LI");
+        el.classList.toggle("is-match", q && show);
+        if(el.tagName==="LI"){
+          el.style.display = (!q || show) ? "" : "none";
+        }
+      });
+    });
+
+    // Audio uploader
+    const input = document.getElementById("audioInput");
+    const player = document.getElementById("player");
+    const dz = document.getElementById("dropzone");
+
+    function loadAudio(file){
+      if(!file) return;
+      const url = URL.createObjectURL(file);
+      player.src = url;
+      player.hidden = false;
+      player.play().catch(()=>{ /* autoplay puede bloquearse */ });
+    }
+
+    input.addEventListener("change", e=> loadAudio(e.target.files[0]));
+
+    ;["dragenter","dragover"].forEach(evt=>{
+      dz.addEventListener(evt, e=>{
+        e.preventDefault(); e.stopPropagation();
+        dz.classList.add("is-drag");
+      });
+    });
+    ;["dragleave","drop"].forEach(evt=>{
+      dz.addEventListener(evt, e=>{
+        e.preventDefault(); e.stopPropagation();
+        dz.classList.remove("is-drag");
+      });
+    });
+    dz.addEventListener("drop", e=>{
+      const file = e.dataTransfer.files && e.dataTransfer.files[0];
+      loadAudio(file);
+    });
+  </script>
+</body>
+</html>
